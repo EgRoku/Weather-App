@@ -84,7 +84,7 @@ function getWeatherToday() {
 		// console.log(cityLat);
 
 		var getUrlUvi = `https://api.openweathermap.org/data/2.5/onecall?lat=${cityLat}&lon=${cityLon}&exclude=hourly,daily,minutely&appid=${key}`;
-
+		// Gets UV index from api and applies a color code
 		$.ajax({
 			url: getUrlUvi,
 			method: 'GET',
@@ -113,6 +113,7 @@ function getWeatherToday() {
 
 var fiveForecastEl = $('.fiveForecast');
 
+// gets the weather for the next 5 days and injects cards onto the page
 function getFiveDayForecast() {
 	var getUrlFiveDay = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=imperial&appid=${key}`;
 
@@ -122,7 +123,7 @@ function getFiveDayForecast() {
 	}).then(function (response) {
 		var fiveDayArray = response.list;
 		var myWeather = [];
-		//Made a object that would allow for easier data read
+		// Made a object that would allow for easier data read
 		$.each(fiveDayArray, function (index, value) {
 			testObj = {
 				date: value.dt_txt.split(' ')[0],
@@ -137,7 +138,7 @@ function getFiveDayForecast() {
 				myWeather.push(testObj);
 			}
 		})
-		//Inject the cards to the screen 
+		// Injects cards to the screen 
 		for (let i = 0; i < myWeather.length; i++) {
 
 			var divElCard = $('<div>');
@@ -160,13 +161,13 @@ function getFiveDayForecast() {
 			divElIcon.attr('src', `https://openweathermap.org/img/wn/${myWeather[i].icon}@2x.png`);
 			divElBody.append(divElIcon);
 
-			//Temp
+			// Temp
 			var temp = $('<p>').text(`Temperature: ${myWeather[i].temp} °F`);
 			divElBody.append(temp);
-			//Feels Like
+			// Feels Like
 			var feelsLike = $('<p>').text(`Feels Like: ${myWeather[i].feels_like} °F`);
 			divElBody.append(feelsLike);
-			//Humidity
+			// Humidity
 			var humidity = $('<p>').text(`Humidity: ${myWeather[i].humidity} %`);
 			divElBody.append(humidity);
 		}
