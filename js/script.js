@@ -94,7 +94,7 @@ function getWeatherToday() {
 			var uvi = response.current.uvi;
 			pElUvi.append(uviSpan);
 			cardTodayBody.append(pElUvi);
-			//set the UV index to match an exposure chart severity based on color 
+			// sets the UV index to match an exposure chart severity based on color 
 			if (uvi >= 0 && uvi <= 2) {
 				uviSpan.attr('class', 'green');
 			} else if (uvi > 2 && uvi <= 5) {
