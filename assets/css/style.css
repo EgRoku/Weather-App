@@ -80,9 +80,9 @@
   
   .display {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
-    gap: 100px;
+    align-items: center;
   }
   
   .displayCity {
