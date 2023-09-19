@@ -1,6 +1,7 @@
 # Weather App
 
-## Created a Weather app to view the weather across the world.
+## Description
+Created a Weather app to view the weather across the world.
 
 ## Example image
 
@@ -20,9 +21,10 @@ Enter a desired city's name in the search bar to view the weather there. Once en
 
 ## Credits 
 
-Bootstrap
+Bootstrap styling for initial cards
 Jquery
 openweatherAPI
+FontAwesome
 
 ## License
 
