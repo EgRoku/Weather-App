@@ -5,7 +5,7 @@ Created a Weather app to view the weather across the world.
 
 ## Example image
 
-![Screenshot (125)](https://github.com/EgRoku/Weather-App/assets/125640560/979acddf-1abf-4029-ab69-91a92ca63adb)
+![Screenshot (126)](https://github.com/EgRoku/Weather-App/assets/125640560/bf96f732-8fb2-4062-b03f-355c4713b847)
 
 ## Link to Live Site
 
